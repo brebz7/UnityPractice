@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class MoveCube : MonoBehaviour {
 
-  //  public float moveSpeed = 10f;
-    public float range = 10f;
+  //public float moveSpeed = 10f;
+    public float range;
 
 
    
@@ -33,10 +33,10 @@ public class MoveCube : MonoBehaviour {
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
         float xPos = h * range;
-        float yPos = v * range;
+        float zPos = v * range;
 
         transform.Translate(Vector3.right * xPos * Time.deltaTime);
-        transform.Translate(Vector3.forward * yPos * Time.deltaTime);
+        transform.Translate(Vector3.forward * zPos * Time.deltaTime);
        
 	}
 }
