@@ -27,7 +27,7 @@ GameObject:
   - component: {fileID: 114310327318058784}
   - component: {fileID: 114016851159932016}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: Sphere Red
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -60,7 +60,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0bd06821598bc7b44889737a1598f5df, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

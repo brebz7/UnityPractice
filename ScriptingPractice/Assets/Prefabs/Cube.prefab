@@ -55,27 +55,27 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1476782488285584}
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: -0.008, y: -0.018000126, z: -0.664}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.008, y: -0.018000126, z: 0.88}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4874811091696316}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4874811091696316
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1870016578317074}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 2.41, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4429356600692248}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!23 &23734598658857826
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -127,7 +127,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -156,8 +156,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sphere: {fileID: 54179645390630814, guid: 97af9447a19a9a242985fbb8ea616a01, type: 2}
-  sphereSpawn: {fileID: 4135049754890166, guid: 36c5dbcbcbcfbf444b6ba8df226611b2,
-    type: 2}
+  sphereRed: {fileID: 54179645390630814, guid: b5d3691c23650f0419a46e47af61ab08, type: 2}
+  sphereSpawn: {fileID: 4429356600692248}
 --- !u!114 &114516797395784718
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -180,7 +180,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e744e9677f3b7cc498ba41def74c1cec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 10
+  movementSpeed: 10
+  turnRateSpeed: 180
 --- !u!114 &114981577324151278
 MonoBehaviour:
   m_ObjectHideFlags: 1
