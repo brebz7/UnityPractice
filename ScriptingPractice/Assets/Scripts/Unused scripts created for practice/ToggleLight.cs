@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class ToggleLight : MonoBehaviour {
 
-    public Light light;
+    public Light m_light;
 
 	// Use this for initialization
 	void Start ()
     {
-        light = gameObject.GetComponent<Light>();
+        m_light = gameObject.GetComponent<Light>();
 	}
 	
 	// Update is called once per frame
@@ -17,7 +17,7 @@ public class ToggleLight : MonoBehaviour {
     {
 		if (Input.GetKeyDown(KeyCode.Space))
         {
-            light.enabled = !light.enabled;
+            m_light.enabled = !m_light.enabled;
         }
 
         if (Input.GetKeyDown(KeyCode.E))
