@@ -157,6 +157,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sphere: {fileID: 54179645390630814, guid: 97af9447a19a9a242985fbb8ea616a01, type: 2}
   sphereRed: {fileID: 54179645390630814, guid: b5d3691c23650f0419a46e47af61ab08, type: 2}
+  sphereGreen: {fileID: 54179645390630814, guid: 3657b39d6c590bc4ab0410f6a70f16f9,
+    type: 2}
+  sphereBlue: {fileID: 54179645390630814, guid: 41a3733a7b5222644a2dc6b2193efaea,
+    type: 2}
   sphereSpawn: {fileID: 4429356600692248}
 --- !u!114 &114516797395784718
 MonoBehaviour:
