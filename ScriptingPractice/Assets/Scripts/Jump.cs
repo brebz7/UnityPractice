@@ -10,6 +10,7 @@ public class Jump : MonoBehaviour {
     public float lowJumpMultiplier = 2f;
 
     private Rigidbody rb;
+    private bool isGrounded = true;
 
     void Awake()
     {
@@ -18,7 +19,7 @@ public class Jump : MonoBehaviour {
 
     void FixedUpdate()
     {
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump") && isGrounded)
         {
             GetComponent<Rigidbody>().velocity = Vector3.up * jumpVelocity;
         }
@@ -30,5 +31,17 @@ public class Jump : MonoBehaviour {
         {
             rb.velocity += Vector3.up * Physics.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
         }
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.name == "Plane")
+            isGrounded = true;
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.name == "Plane")
+            isGrounded = false;
     }
 }
