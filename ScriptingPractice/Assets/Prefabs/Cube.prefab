@@ -162,9 +162,11 @@ GameObject:
   - component: {fileID: 114981577324151278}
   - component: {fileID: 114361594707444072}
   - component: {fileID: 114693333307828926}
+  - component: {fileID: 114696168955833780}
+  - component: {fileID: 114130227277374242}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -380,7 +382,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!65 &65402418184590762
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -393,6 +395,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114130227277374242
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1870016578317074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c30c543ad46e17049bd8fa460832893c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 54089858280864938}
+  forwardForce: 2000
 --- !u!114 &114361594707444072
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -411,6 +426,7 @@ MonoBehaviour:
   sphereBlue: {fileID: 54179645390630814, guid: 41a3733a7b5222644a2dc6b2193efaea,
     type: 2}
   sphereSpawn: {fileID: 4429356600692248}
+  shootForce: 50
 --- !u!114 &114516797395784718
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -436,6 +452,18 @@ MonoBehaviour:
   jumpVelocity: 4.1
   fallMultiplier: 2.5
   lowJumpMultiplier: 2
+--- !u!114 &114696168955833780
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1870016578317074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e4b3d79efa12bc449b9a73a3e1c327a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraFollow: {fileID: 0}
 --- !u!114 &114706276849008542
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -447,8 +475,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e744e9677f3b7cc498ba41def74c1cec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 10
-  turnRateSpeed: 180
+  movementSpeed: 25
 --- !u!114 &114981577324151278
 MonoBehaviour:
   m_ObjectHideFlags: 1

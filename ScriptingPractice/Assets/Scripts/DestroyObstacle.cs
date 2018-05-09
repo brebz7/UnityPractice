@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class DestroyObstacle : MonoBehaviour {
 
+    public Score scorePoints;
+
 	void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.tag == "Obstacle")

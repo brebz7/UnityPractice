@@ -9,6 +9,7 @@ public class ShootSphere : MonoBehaviour {
     public Rigidbody sphereGreen;
     public Rigidbody sphereBlue;
     public Transform sphereSpawn;
+    public float shootForce;
 
 	// Use this for initialization
 	void Start () {
@@ -42,6 +43,6 @@ public class ShootSphere : MonoBehaviour {
     {
         Rigidbody sphereInstance;
         sphereInstance = Instantiate(sphereType, sphereSpawn.position, sphereSpawn.rotation) as Rigidbody;
-        sphereInstance.AddForce(sphereSpawn.forward * 1200);
+        sphereInstance.AddForce(sphereSpawn.forward * shootForce * 100);
     }
 }

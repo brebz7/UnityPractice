@@ -5,7 +5,7 @@ using UnityEngine;
 public class MoveCube : MonoBehaviour {
 
     public float movementSpeed;
-    public float turnRateSpeed;
+    //public float turnRateSpeed;
 
     private float movementInputValue;
     private float turnRateInputValue;
@@ -26,11 +26,21 @@ public class MoveCube : MonoBehaviour {
 
     void FixedUpdate ()
     {
-        Vector3 movement = transform.forward * movementInputValue * 10 * Time.deltaTime;
+
+
+        Vector3 movement = transform.forward * movementInputValue * movementSpeed * Time.deltaTime;
         m_rigidbody.MovePosition(m_rigidbody.position + movement);
 
-        float turn = turnRateInputValue * turnRateSpeed * Time.deltaTime;
-        Quaternion turnRotation = Quaternion.Euler(0f, turn, 0f);
-        m_rigidbody.MoveRotation(m_rigidbody.rotation * turnRotation);
+
+        // STRAFE with A and D
+        movement = transform.right * turnRateInputValue * movementSpeed * Time.deltaTime;
+        m_rigidbody.MovePosition(m_rigidbody.position + movement);
+
+        // ROTATE with A and D
+        //float turn = turnRateInputValue * turnRateSpeed * Time.deltaTime;
+        //Quaternion turnRotation = Quaternion.Euler(0f, turn, 0f);
+        //m_rigidbody.MoveRotation(m_rigidbody.rotation * turnRotation);
+
+
     }
 }
