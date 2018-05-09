@@ -7,7 +7,10 @@ public class Score : MonoBehaviour {
     public Text scoreText;
     
 
-	void Update () {
-        scoreText.text = player.position.z.ToString("0");
+	void Update() {
+        if (player.position.z >= 0)
+            scoreText.text = player.position.z.ToString("0");
+        else
+            scoreText.text = "0";
 	}
 }
