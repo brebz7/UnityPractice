@@ -35,13 +35,13 @@ public class Jump : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.name == "Plane")
+        if (other.gameObject.tag == "Ground")
             isGrounded = true;
     }
 
     void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.name == "Plane")
+        if (other.gameObject.tag == "Ground")
             isGrounded = false;
     }
 }
