@@ -41,6 +41,9 @@ public class MoveCube : MonoBehaviour {
         //Quaternion turnRotation = Quaternion.Euler(0f, turn, 0f);
         //m_rigidbody.MoveRotation(m_rigidbody.rotation * turnRotation);
 
-
+        if (m_rigidbody.position.y < -0.05f)
+        {
+            FindObjectOfType<GameManager>().EndGame();
+        }
     }
 }

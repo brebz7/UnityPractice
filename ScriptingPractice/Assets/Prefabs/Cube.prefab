@@ -159,7 +159,6 @@ GameObject:
   - component: {fileID: 54089858280864938}
   - component: {fileID: 114516797395784718}
   - component: {fileID: 114706276849008542}
-  - component: {fileID: 114981577324151278}
   - component: {fileID: 114361594707444072}
   - component: {fileID: 114693333307828926}
   - component: {fileID: 114696168955833780}
@@ -401,13 +400,13 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1870016578317074}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c30c543ad46e17049bd8fa460832893c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 54089858280864938}
-  forwardForce: 2000
+  forwardForce: 5
 --- !u!114 &114361594707444072
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -426,7 +425,7 @@ MonoBehaviour:
   sphereBlue: {fileID: 54179645390630814, guid: 41a3733a7b5222644a2dc6b2193efaea,
     type: 2}
   sphereSpawn: {fileID: 4429356600692248}
-  shootForce: 50
+  shootForce: 150
 --- !u!114 &114516797395784718
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -449,7 +448,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d56dff2477daf274eb36336011d1c742, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpVelocity: 4.1
+  jumpVelocity: 7.25
   fallMultiplier: 2.5
   lowJumpMultiplier: 2
 --- !u!114 &114696168955833780
@@ -476,18 +475,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 25
---- !u!114 &114981577324151278
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1870016578317074}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71d09fd4ab02c2645b6ef73ec2e32729, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  psystem: {fileID: 198481042831611770}
 --- !u!198 &198060882437132042
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -3837,7 +3824,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -270144009
+  randomSeed: 1097165587
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -7243,7 +7230,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 0
-  randomSeed: -965509062
+  randomSeed: 1892667324
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -17378,7 +17365,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 0
-  randomSeed: 1001174198
+  randomSeed: 1669099809
   InitialModule:
     serializedVersion: 3
     enabled: 1
