@@ -318,6 +318,12 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 455989600}
+    - target: {fileID: 114348336043469004, guid: c45558c2924593f458e71718c8ed5a84,
+        type: 2}
+      propertyPath: destroyObs
+      value: 
+      objectReference: {fileID: 114439593428541092, guid: 97af9447a19a9a242985fbb8ea616a01,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c45558c2924593f458e71718c8ed5a84, type: 2}
   m_IsPrefabParent: 0

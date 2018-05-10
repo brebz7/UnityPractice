@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class DestroyPlayer : MonoBehaviour {
 
-    public CameraFollow cameraFollow; 
+    public CameraFollow cameraFollow;
+    public Score score;
 
-    private MoveCube movement;
+    private GameManager gameManager;
+    //private MoveCube movement;
 
     void Awake()
     {
-        movement = GetComponent<MoveCube>();
+        // movement = GetComponent<MoveCube>();
+        gameManager = FindObjectOfType<GameManager>();
+        score = FindObjectOfType<Score>();
     }
 
 	void OnCollisionEnter (Collision other)
@@ -22,8 +26,8 @@ public class DestroyPlayer : MonoBehaviour {
             //movement.enabled = false;
             //cameraFollow.enabled = false;
             Destroy(gameObject, 1f);
-
-            FindObjectOfType<GameManager>().EndGame();
+            score.alive = false;
+            gameManager.EndGame();
         }
     }
 }
