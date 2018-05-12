@@ -9,8 +9,12 @@ public class Enemy : MovingObject {
     private Animator animator;
     private Transform target;
     private bool skipMove;
-    
-	protected override void Start ()
+
+    public AudioClip enemyAttack1;
+    public AudioClip enemyAttack2;
+
+
+    protected override void Start ()
     {
         GameManager.instance.AddEnemyToList(this);
         animator = GetComponent<Animator>();
@@ -46,7 +50,8 @@ public class Enemy : MovingObject {
     protected override void OnCantMove<T>(T component)
     {
         Player hitPlayer = component as Player;
-        animator.SetTrigger("enemyAttack");
         hitPlayer.LoseFood(playerDamage);
+        animator.SetTrigger("enemyAttack");
+        SoundManager.instance.RandomizeSfx(enemyAttack1, enemyAttack2);
     }
 }
