@@ -5,8 +5,9 @@ using UnityEngine;
 public class DestroyPlayer : MonoBehaviour {
 
     public CameraFollow cameraFollow;
-    public Score score;
+    public ShakeCamera cameraShake;
 
+    private Score score;
     private GameManager gameManager;
     //private MoveCube movement;
 
@@ -28,6 +29,8 @@ public class DestroyPlayer : MonoBehaviour {
             Destroy(gameObject, 1f);
             score.alive = false;
             gameManager.EndGame();
+
+            StartCoroutine(cameraShake.Shake(.15f, .4f));
         }
     }
 }
